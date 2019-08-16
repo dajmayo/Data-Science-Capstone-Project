@@ -1,0 +1,44 @@
+---
+title: 'Data Science Capstone Project: Word Prediction'
+author: "Danna Ashley J. Mayo"
+date: "August 16, 2019 - Friday"
+output:
+  ioslides_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+## Introduction {data-background=grad.jpg data-background-size=cover}
+Objective:
+
+The goal is to build  a product specifically a shiny application made using R to highlight the prediction algorithm that is built and to provide a user-friendly interface that can be accessed by others conveniently.
+
+## How was it created? {data-background=grad.jpg data-background-size=cover}
+- Preprocessed the data (removed unnecessary expressions not needed for prediction)</font>
+- Stemmed the text corpus
+- Created N-grams and Document Frequency Matrices from the corpus
+- Tokenized the group of words for better word count
+- Created functions to predict next word using the concept of n-gram and backoff modeling
+
+<span style="color:#7C0000">Limitations:</span>
+
+- <b><font size = "3">If the word or phrase entered in the text box is beyond the scope of the algorithm, it will produce or display "NA"s for all buttons. 
+- Words more than three will predict the next word only based on the last two words of the whole phrase or sentence. This is because of the constraints from the n-gram model.</font></b>
+```{r}
+```
+## Shiny Application: How does it work? {data-background=grad.jpg data-background-size=cover}
+```{r}
+library(png)
+library(grid)
+appimg <- readPNG('appss.PNG')
+grid.raster(appimg)
+```
+<font size = "4">Reminder: The application is subject to limitations mentioned in the previous slide. </font>
+
+## Sources {data-background=grad.jpg data-background-size=cover}
+Shiny Application: https://dajmayo.shinyapps.io/WordPrediction/
+
+Github Repository: https://github.com/dajmayo/Data-Science-Capstone-Project
+
+Dataset: https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip
